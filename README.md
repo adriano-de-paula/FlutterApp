@@ -1,16 +1,23 @@
-# myapp
+# FlutterApp - Semana 3
 
-A new Flutter project.
+Este repositório faz parte das atividades da disciplina **Desenvolvimento de Aplicativos 1**.  
+Na **Semana 3**, foi criada a branch `semana3` para dar continuidade ao projeto iniciado na Semana 2.  
 
-## Getting Started
+## O que foi feito nesta semana
+- Criação da nova branch: **`semana3`**
+- Adicionado o arquivo **`dart_test.dart`** com testes unitários em Dart:
+  - **Verificação de um número perfeito** (`isPerfect`), feito no vídeo da semana
+  - **Cálculo do fatorial de um número** (`factorial`), feito no vídeo da semana
+  - **Verificação de número primo** (`isPrime`), feito por mim
+  - **Cálculo da soma dos dígitos** (`sumOfDigits`), feito por mim
 
-This project is a starting point for a Flutter application.
+## Estrutura de Testes
+Os testes foram escritos utilizando o pacote [`test`](https://pub.dev/packages/test) e cobrem os seguintes cenários:
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Branches do projeto
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- main → Implementações da Semana 2 (primeiro app e integração com GitHub)
+
+- semana3 → Adição de testes unitários em Dart
+
