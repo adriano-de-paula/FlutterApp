@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'components.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -46,18 +48,47 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-  
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-    
+
         title: Text(widget.title),
       ),
+
+      drawer: Drawer(
+       child: SafeArea(
+         child: ListView(
+           padding: EdgeInsets.zero,
+           children: [
+             DrawerHeader(
+               decoration: BoxDecoration(
+                 color: Theme.of(context).colorScheme.primaryContainer,
+               ),
+               child: Align(
+                 alignment: Alignment.bottomLeft,
+                 child: Text(
+                   'Menu',
+                   style: Theme.of(context).textTheme.headlineSmall,
+                 ),
+               ),
+             ),
+             ListTile(
+               leading: const Icon(Icons.pages),
+               title: const Text('Componentes'),
+               onTap: () {
+                 Navigator.pop(context); // fecha o drawer
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (_) => const ComponentsPage()),
+                 );
+               },
+             ),
+           ],
+         ),
+       ),
+     ),
       body: Center(
-      
         child: Column(
-        
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text('You have pushed the button this many times:'),
@@ -68,12 +99,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
             TextButton(onPressed: _incrementCounter, child: Text('Increment')),
             TextButton(onPressed: _decrementCounter, child: Text('Decrement')),
-
-
           ],
         ),
       ),
-
     );
   }
 }
